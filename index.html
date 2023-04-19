@@ -141,7 +141,6 @@
                   canvasRect.top +
                   canvasRect.height / 2,
               };
-              console.log({ x: event.pageX, y: event.pageY });
               if (
                 event.pageX >= dropAreaToScreen.left &&
                 event.pageX <= dropAreaToScreen.right &&
@@ -157,7 +156,6 @@
                   "DragAndDropManager",
                   "MouseLeaveDropArea"
                 );
-              console.log(window.dropLocation);
               unityInstance.SendMessage("DragAndDropManager", "DragOver");
             });
             container.addEventListener("dragend", (event) => {
